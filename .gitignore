@@ -1,1 +1,8 @@
 skills/
+__pycache__/
+*.py[cod]
+*$py.class
+checkpoints/
+*.pt
+*.bin
+evaluation_results.csv
