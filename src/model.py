@@ -29,9 +29,9 @@ class MaskedAttentionPooling(nn.Module):
         # (batch_size, seq_len, 1)
         scores = self.attention(hidden_states)
 
-        # Gán giá trị cực âm cho các vị trí <pad> để sau softmax xác suất = 0
+        # Gán giá trị âm cho các vị trí <pad> (dùng -10000.0 để tương thích cả float16 / AMP mà không bị overflow)
         mask = attention_mask.unsqueeze(-1)  # (batch_size, seq_len, 1)
-        scores = scores.masked_fill(mask == 0, -1e9)
+        scores = scores.masked_fill(mask == 0, -10000.0)
 
         weights = F.softmax(scores, dim=1)  # (batch_size, seq_len, 1)
         pooled = torch.sum(hidden_states * weights, dim=1)  # (batch_size, hidden_size)
