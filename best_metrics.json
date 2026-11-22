@@ -1,0 +1,59 @@
+{
+  "sentiment_macro_f1": 0.696951005553525,
+  "sentiment_f1_Negative (-1)": 0.5653887495521318,
+  "sentiment_f1_Neutral (0)": 0.7791898332009531,
+  "sentiment_f1_Positive (1)": 0.7462744339074898,
+  "toxicity_macro_f1": 0.6037525847803972,
+  "toxicity_f1_Clean (0)": 0.9466636911403704,
+  "toxicity_f1_Toxic (1)": 0.5688524590163935,
+  "toxicity_f1_Very Toxic (2)": 0.6597938144329897,
+  "toxicity_f1_Extremely Toxic (3)": 0.2397003745318352,
+  "composite_score": 0.6503517951669611,
+  "toxicity_pr_auc_Clean (0)": 0.9874667803987665,
+  "toxicity_pr_auc_Toxic (1)": 0.6549252189154985,
+  "toxicity_pr_auc_Very Toxic (2)": 0.7521921084127329,
+  "toxicity_pr_auc_Extremely Toxic (3)": 0.4086982679543483,
+  "sentiment_confusion_matrix": [
+    [
+      789,
+      546,
+      303
+    ],
+    [
+      239,
+      2943,
+      535
+    ],
+    [
+      125,
+      348,
+      1928
+    ]
+  ],
+  "toxicity_confusion_matrix": [
+    [
+      6363,
+      277,
+      83,
+      143
+    ],
+    [
+      167,
+      347,
+      23,
+      17
+    ],
+    [
+      35,
+      34,
+      192,
+      21
+    ],
+    [
+      12,
+      8,
+      2,
+      32
+    ]
+  ]
+}
